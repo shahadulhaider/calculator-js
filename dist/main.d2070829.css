@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+  background: linear-gradient(to right, #78909c , #eceff1);
+}
+
+.calculator-grid {
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(160px, auto) repeat(5, 80px);
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: #000000bf;
+  color: #ffffffab;
+}
+
+.calculator-grid>button:hover {
+  background-color: orangered;
+  color: white;
+  transform: scale(1.05);
+}
+
+.span-col {
+  grid-column: span 2;
+}
+
+.span-row {
+  grid-row: span 2;
+}
+
+button.operator {
+  background-color: #546e7a;
+  color: white;
+}
+
+.output {
+  grid-column: span 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #ffffffab;
+  padding: 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: #000000bf;
+  font-size: 1.7rem;
+}
+
+.output .current-operand {
+  color: black;
+  font-size: 3.5rem;
+}
+
+/*# sourceMappingURL=/main.d2070829.css.map */
